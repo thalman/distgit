@@ -4,7 +4,7 @@ Version: 1.3.9
 Release: 1%{?dist}%{?extra_release}
 Epoch: 1
 License: MIT
-Source0: https://www.aleksey.com/xmlsec/download/xmlsec1-%{version}.tar.gz
+Source0: https://github.com/lsh123/xmlsec/releases/download/%{version}/xmlsec1-%{version}.tar.gz
 URL: http://www.aleksey.com/xmlsec/
 BuildRequires: make
 BuildRequires: pkgconfig(libxml-2.0) >= 2.8.0
