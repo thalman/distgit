@@ -104,6 +104,9 @@ rm -vf %{buildroot}%{_libdir}/*.la
 rm -rf __tmp_doc ; mkdir __tmp_doc
 mv %{buildroot}%{_docdir}/xmlsec1/* __tmp_doc
 
+# remove unvanted files
+rm -rf %{buildroot}/usr/bin/xmlsec_unit_tests %{buildroot}/usr/lib/debug/
+
 %ldconfig_scriptlets
 %ldconfig_scriptlets gnutls
 %ldconfig_scriptlets openssl
