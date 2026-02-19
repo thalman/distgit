@@ -12,7 +12,6 @@ BuildRequires: pkgconfig(libxslt) >= 1.0.20
 BuildRequires: pkgconfig(openssl) >= 3.0.0
 BuildRequires: pkgconfig(nss) >= 3.49.0
 BuildRequires: pkgconfig(nspr) >= 4.25.0
-BuildRequires: libgcrypt-devel >= 1.4.0
 BuildRequires: pkgconfig(gnutls) >= 3.6.13
 BuildRequires: libtool-ltdl-devel
 # autoreconf stuff
@@ -50,22 +49,6 @@ Requires: xmlsec1-openssl%{?_isa} = 1:%{version}-%{release}
 
 %description openssl-devel
 Libraries, includes, etc. for developing XML Security applications with OpenSSL
-
-%package gcrypt
-Summary: GCrypt crypto plugin for XML Security Library
-Requires: xmlsec1%{?_isa} = 1:%{version}-%{release}
-
-%description gcrypt
-GCrypt plugin for XML Security Library provides GCrypt based crypto services
-for the xmlsec library.
-
-%package gcrypt-devel
-Summary: GCrypt crypto plugin for XML Security Library
-Requires: xmlsec1-devel%{?_isa} = 1:%{version}-%{release}
-Requires: xmlsec1-gnutls-devel%{?_isa} = 1:%{version}-%{release}
-
-%description gcrypt-devel
-Libraries, includes, etc. for developing XML Security applications with GCrypt.
 
 %package gnutls
 Summary: GNUTls crypto plugin for XML Security Library
@@ -150,14 +133,6 @@ mv %{buildroot}%{_docdir}/xmlsec1/* __tmp_doc
 %files openssl-devel
 %{_includedir}/xmlsec1/xmlsec/openssl/
 %{_libdir}/pkgconfig/xmlsec1-openssl.pc
-
-%files gcrypt
-%{_libdir}/libxmlsec1-gcrypt.so.*
-%{_libdir}/libxmlsec1-gcrypt.so
-
-%files gcrypt-devel
-%{_includedir}/xmlsec1/xmlsec/gcrypt/
-%{_libdir}/pkgconfig/xmlsec1-gcrypt.pc
 
 %files gnutls
 %{_libdir}/libxmlsec1-gnutls.so.*
