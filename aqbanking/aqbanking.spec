@@ -15,8 +15,6 @@ BuildRequires: gmp-devel, gettext, libtool
 BuildRequires: xmlsec1-gnutls-devel, xmlsec1-devel >= 3.0.0, libtool-ltdl-devel, libxslt-devel, libxml2-devel
 # For AutoReq cmake-filesystem
 BuildRequires: cmake
-# bug in xmlscec1
-BuildRequires: xmlsec1-gnutls, xmlsec1-gcrypt
 BuildRequires: make
 Requires: libchipcard
 Obsoletes: aqhbci <= 1.0.3
